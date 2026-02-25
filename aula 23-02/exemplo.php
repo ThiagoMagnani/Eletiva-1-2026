@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="" href="stylesheet">
 </head>
+
 <body>
     <div class="container py-3">
         <h1>Olá</h1>
@@ -14,9 +16,10 @@
         <form method="post" action="resposta.php">
             <div class="mb-3">
                 <label for="nome" class="from-label">Insira seu nome:</label>
-                
+
             </div>
         </form>
     </div>
 </body>
+
 </html>
