@@ -13,7 +13,7 @@
         <h1></h1>
         <form method="post">
             <div class="mb-3">
-                <label for="num1" class="form-label">Insira o grau em Celsius</label>
+                <label for="num1" class="form-label">Insira uma temperatura em Celsius</label>
                 <input type="text" id="num1" name="num1" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
