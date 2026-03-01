@@ -17,7 +17,7 @@
                 <input type="text" id="num1" name="num1" class="form-control" required="">
             </div>
             <div class="mb-3">
-                <label for="num2" class="form-label">Inserir o tempo em horas (1:30 = 1.5)</label>
+                <label for="num2" class="form-label">Inserir o tempo (1:30 = 1.5)</label>
                 <input type="text" id="num2" name="num2" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
