@@ -13,21 +13,16 @@
         <h1></h1>
         <form method="post">
             <div class="mb-3">
-                <label for="num1" class="form-label">Insira a largura do retângulo</label>
+                <label for="num1" class="form-label">Insira o valor em metros</label>
                 <input type="text" id="num1" name="num1" class="form-control" required="">
-            </div>
-            <div class="mb-3">
-                <label for="num2" class="form-label">Inserir o a altura do retângulo</label>
-                <input type="text" id="num2" name="num2" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $valor1 = $_POST['num1'];
-            $valor2 = $_POST['num2'];
-            $perimetro = 2 * ($valor1 + $valor2);
-            echo "O perímetro do retângulo é: $perimetro";
+            $centimetros = $valor1 * 100;
+            echo "O valor em centímetros é: $centimetros";
         }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
