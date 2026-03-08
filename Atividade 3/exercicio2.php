@@ -13,28 +13,29 @@
         <h1></h1>
         <form method="post">
             <div class="mb-3">
-                <label for="num1" class="form-label">Insira 7 números separados por espaço: </label>
-                <input type="text" name="numeros" class="form-control" required="">
+                <label for="num1" class="form-label">Insira o primeiro número: </label>
+                <input type="text" name="a" class="form-control" required="">
+            </div>
+            <div class="mb-3">
+                <label for="num2" class="form-label">Insira o segundo número: </label>
+                <input type="text" name="b" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $entrada = $_POST["numeros"];
-            $numeros = explode(" ", $entrada);
+            $a = $_POST["a"];
+            $b = $_POST["b"];
 
-            $menor = $numeros[0];
-            $posicao = 0;
+            $soma = $a + $b;
 
-            for ($i = 0; $i < 7; $i++) {
-                if ($numeros[$i] < $menor) {
-                    $menor = $numeros[$i];
-                    $posicao = $i;
-                }
+            if ($a == $b) {
+                $resultado = $soma * 3;
+            } else {
+                $resultado = $soma;
             }
 
-            echo "Menor número: $menor <br>";
-            echo "Posição: $posicao";
+            echo "Resultado: $resultado";
         }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
