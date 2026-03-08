@@ -13,29 +13,24 @@
         <h1></h1>
         <form method="post">
             <div class="mb-3">
-                <label for="num1" class="form-label">Insira o primeiro número: </label>
-                <input type="text" name="a" class="form-control" required="">
-            </div>
-            <div class="mb-3">
-                <label for="num2" class="form-label">Insira o segundo número: </label>
-                <input type="text" name="b" class="form-control" required="">
+                <label for="num1" class="form-label">Insira o número: </label>
+                <input type="text" name="num" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $a = $_POST["a"];
-            $b = $_POST["b"];
+            $num = $_POST["num"];
 
-            $soma = $a + $b;
+            $i = 1;
+            $soma = 0;
 
-            if ($a == $b) {
-                $resultado = $soma * 3;
-            } else {
-                $resultado = $soma;
+            while ($i <= $num) {
+                $soma = $soma + $i;
+                $i++;
             }
 
-            echo "Resultado: $resultado";
+            echo "Soma: $soma";
         }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
