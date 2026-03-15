@@ -13,22 +13,16 @@
         <h1></h1>
         <form method="post">
             <div class="mb-3">
-                <label for="frase" class="form-label">Insira a frase: </label>
-                <input type="text" name="frase" class="form-control" required="">
+                <label for="valor" class="form-label">Insira um valor: </label>
+                <input type="text" name="valor" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $frase = $_POST["frase"];
+            $valor = $_POST["valor"];
 
-            $fraseSemEspaco = str_replace(" ", "", $frase);
-            $fraseSemEspacoComFin = trim($frase);
-
-            echo "<p>Frase original: $frase";
-            echo "<p>Frase sem espaço: $fraseSemEspaco";
-            echo "<p>Frase sem espaço no começo e final: $fraseSemEspacoComFin";
-
+            echo 'R$ ' . number_format($valor, 2, ',', '.');
         }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
