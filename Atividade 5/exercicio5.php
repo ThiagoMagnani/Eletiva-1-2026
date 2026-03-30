@@ -42,18 +42,15 @@
                 $titulo = $titulos[$i];
                 $quantidade = $quantidades[$i];
 
-                // cria o mapa (título => quantidade)
                 $livros[$titulo] = $quantidade;
             }
 
-            // ordenar pelo título (chave)
             ksort($livros);
 
             echo "<h3>Lista de Livros:</h3>";
 
             foreach ($livros as $titulo => $quantidade) {
 
-                // alerta de estoque baixo
                 if ($quantidade < 5) {
                     echo "<p class='text-danger'><strong>$titulo</strong>: $quantidade (Estoque baixo!)</p>";
                 } else {
