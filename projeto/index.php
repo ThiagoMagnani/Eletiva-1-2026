@@ -24,7 +24,7 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         try{
-          $stmt = $pdo->prepare("SELECT * FROM usuario WHERE email = ?");
+          $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
           $stmt->execute([$email]);
           $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
           if($usuario && password_verify($senha, $usuario['senha'])){

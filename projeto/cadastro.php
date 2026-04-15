@@ -31,12 +31,12 @@
   </div>
   <?php
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        require("conexao.php");
+        require_once("conexao.php");
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
         try{
-            $stmt = $pdo->prepare("INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
             if($stmt->execute([$nome, $email, $senha])){
                 header("location: index.php?cadastro=true");
             } else{
